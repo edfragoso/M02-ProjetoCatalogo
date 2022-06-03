@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styleVT.css">
+    <title>Vinhos Tintos</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul><li><img src="" alt="" /></li>
+        <li><a id="inicio" href="/">Inicio</a></li> 
+        <li><a id="vinhoTinto" href="/vinhosBrancos">Vinhos Branco</a></li>
+      </ul>
+    </nav>
+
+   <header>
+        <img src="./img/banner_adega.png" class="imgVinho" alt="Banner">
+    </header>
+    
+    <section id="menssagem">
+        <h2>Primeira Section</h2>
+        <p>paragrafo </p> <span id="close">&times;</span>
+    </section>
+
+    <main>
+      <section id="cards">
+        <% vinhoTinto.forEach((vt) => { %>
+
+        <div class="card">
+          <a href="/descricaoVT/<%= vt.id %>"
+            ><img src="<%= vt.img %>" alt="Imagem do vinho"
+          /></a>
+          <h2><%= vt.nome %></h2>
+          <p></p>
+        </div>
+
+        <% }) %>
+      </section>
+
+    </main>
+    <footer>
+      <p>Ednilson Fragoso</p>
+      <p><a href="https://github.com/">GitHub</a></p>
+    </footer>
+    
+  </body>
+</html>

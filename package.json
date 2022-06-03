@@ -1,0 +1,25 @@
+{
+  "name": "m02-projetocatalogo",
+  "version": "1.0.0",
+  "description": "Projeto de um catalogo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edfragoso/M02-ProjetoCatalogo.git"
+  },
+  "author": "Ednilson Lucas Fragoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edfragoso/M02-ProjetoCatalogo/issues"
+  },
+  "homepage": "https://github.com/edfragoso/M02-ProjetoCatalogo#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

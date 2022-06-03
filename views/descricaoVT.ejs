@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/principal.css">
+    <title>Vinhos Tintos</title>
+</head>
+<body>
+   <nav>
+      <ul><li><img src="" alt="" /></li>
+        <li><a href="/"><h1>Inicio</h1></a></li>
+        <li><a href="/vinhosTintos">Vinhos Tinto</a></li>
+        <li><a href="/vinhosBrancos">Vinhos Branco</a></li>
+      </ul>
+    </nav>
+
+    <section id="cards">
+       
+        <div class="card">
+          
+          <img src="<%= vt.img %>" alt="vinho tinto">
+            
+            <h3><strong><%= vt.nome %></strong></h3>
+            
+            <p class="numero"><strong>Nº </strong><%= vt.id %></p>
+            <p class="nome"><strong>Nome: </strong><%= vt.nome %></p>
+            <p class="uva"><strong>Uva: </strong><%= vt.uva %></p>
+            <p class="tipo"><strong>Tipo': </strong><%= vt.tipo %> mt.</p>
+            <p class="gradAlcoo"><strong>Graduação Alcoolica: </strong><%= vt.gradAlcoo %> kg</p>
+            <p class="safra"><strong>Safra: </strong><%= vt.safra %></p>
+            <p class="vinhedo"><strong>Vinhedo: </strong><%= vt.vinhedo %></p>
+            <p class="classe"><strong>classe: </strong><%= vt.classe %></p>
+            <p class="classificacao"><strong>Classificação: </strong><%= vt.classificacao %></p>
+            <p class="volume"><strong>Volume: </strong><%= vt.volume %></p>
+            
+
+            <a href="">Editar</a>
+            <a href="">Apagar</a>
+            
+        </div>
+    
+      </section>
+</body>
+</html>

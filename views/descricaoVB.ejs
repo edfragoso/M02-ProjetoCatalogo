@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/principal.css">
+    <title>Vinhos Tintos</title>
+</head>
+<body>
+  <nav>
+      <ul><li><img src="" alt="" /></li>
+        <li><a href="/"><h1>Inicio</h1></a></li>
+        <li><a href="/vinhosTintos">Vinhos Tinto</a></li>
+        <li><a href="/vinhosBrancos">Vinhos Branco</a></li>
+      </ul>
+    </nav>
+    
+
+    <section id="cards">
+       
+        <div class="card">
+          
+          <img src="<%= vb.img %>" alt="vinho tinto">
+            
+            <h3><strong><%= vb.nome %></strong></h3>
+            
+            <p class="numero"><strong>Nº </strong><%= vb.id %></p>
+            <p class="nome"><strong>Nome: </strong><%= vb.nome %></p>
+            <p class="uva"><strong>Uva: </strong><%= vb.uva %></p>
+            <p class="tipo"><strong>Tipo': </strong><%= vb.tipo %> mt.</p>
+            <p class="gradAlcoo"><strong>Graduação Alcoolica: </strong><%= vb.gradAlcoo %> kg</p>
+            <p class="safra"><strong>Safra: </strong><%= vb.safra %></p>
+            <p class="vinhedo"><strong>Vinhedo: </strong><%= vb.vinhedo %></p>
+            <p class="classe"><strong>classe: </strong><%= vb.classe %></p>
+            <p class="classificacao"><strong>Classificação: </strong><%= vb.classificacao %></p>
+            <p class="volume"><strong>Volume: </strong><%= vb.volume %></p>
+            
+
+            <a href="">Editar</a>
+            <a href="">Apagar</a>
+            
+        </div>
+    
+      </section>
+</body>
+</html>
