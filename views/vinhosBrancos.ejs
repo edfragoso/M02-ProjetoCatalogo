@@ -4,30 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styleVB.css">
-    <title>Catalogo</title>
+    <link rel="stylesheet" href="./css/styleVB.css" />
+    <title>Vinhos Brancos</title>
   </head>
 
   <body>
     <nav>
-      <ul><li><img src="" alt="" /></li>
+      <ul>
+        <li><img src="" alt="" /></li>
         <li><a href="/">Inicio</a></li>
-        <li><a href="/vinhosTintos">Vinhos Tinto</a></li>
-        
+        <li><a id="vinhoTinto" href="/vinhosTintos">Vinhos Tinto</a></li>
+        <li><a id="cadastro" href="/cadastro">Cadastrar Vinho</a></li>
       </ul>
     </nav>
 
-   <header>
-        <img src="./img/banner-vinho-branco.jpg" class="imgVinhoBranco" alt="Banner">
+    <header>
+      <img
+        src="./img/banner-vinho-branco.jpg"
+        class="imgVinhoBranco"
+        alt="Banner"
+      />
     </header>
-    
-    <section id="menssagem">
-        <h2>Primeira Section</h2>
-        <p>paragrafo </p> <span id="close">&times;</span>
-    </section>
 
     <main>
-      
       <section id="cards">
         <% vinhoBranco.forEach((vb) => { %>
 
@@ -41,12 +40,10 @@
 
         <% }) %>
       </section>
-
     </main>
     <footer>
       <p>Ednilson Fragoso</p>
       <p><a href="https://github.com/">GitHub</a></p>
     </footer>
-    
   </body>
 </html>

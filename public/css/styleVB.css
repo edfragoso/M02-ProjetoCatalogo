@@ -66,6 +66,13 @@ main {
   margin: 0 10rem 0 10rem;
 }
 
+section#cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
 section#cards div.card {
   width: 10rem;
   box-shadow: 5px 5px 5px 5px #00000015;

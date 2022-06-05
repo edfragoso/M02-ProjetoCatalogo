@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/formulario.css" />
+    <title>Cadastro de Vinhos</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><img src="" alt="" /></li>
+        <li><a id="inicio" href="/">Inicio</a></li>
+        <li><a id="vinhoTinto" href="/vinhosTintos">Vinhos Tinto</a></li>
+        <li><a id="vinhoBranco" href="/vinhosBrancos">Vinhos Branco</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <section id="cadastro">
+        <% if (vinho === undefined) { %>
+
+        <h2>Cadastre um novo Vinho!</h2>
+
+        <form action="/cadastrar" method="POST">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite o nome do Vinho:"
+            required
+          />
+
+          <label for="uva">Uva:</label>
+          <input
+            type="text"
+            id="uva"
+            name="uva"
+            placeholder="Digite a uva:"
+            required
+          />
+
+          <label for="tipo">Tipo:</label>
+          <input
+            type="text"
+            id="tipo"
+            name="tipo"
+            placeholder="Digite o tipo do vinho:"
+            required
+          />
+
+          <label for="gradAlcoo">Graduação Alcoolica %</label>
+          <input
+            type="text"
+            id="gradAlcoo"
+            name="gradAlcoo"
+            placeholder="Digite a Graduação Alcoolica %:"
+            required
+          />
+
+          <label for="safra">Safra</label>
+          <input
+            type="text"
+            id="safra"
+            name="safra"
+            placeholder="Digite a Safra do Vinho:"
+            required
+          />
+
+          <label for="vinhedo">Vinhedo</label>
+          <input
+            type="text"
+            id="vinhedo"
+            name="vinhedo"
+            placeholder="Vinhedo:"
+            required
+          />
+
+          <label for="classe">Classe:</label>
+          <input
+            type="text"
+            id="classe"
+            name="classe"
+            placeholder="Digite a classe do Vinho:"
+            required
+          />
+
+          <label for="classificacao">Classificação:</label>
+          <input
+            type="text"
+            id="classificacao"
+            name="classificacao"
+            placeholder="Digite a classificacao do Vinho:"
+            required
+          />
+
+          <label for="volume">Volume:</label>
+          <input
+            type="text"
+            id="volume"
+            name="volume"
+            placeholder="Digite o volume em ml:"
+            required
+          />
+
+          <label for="imagem">Link da Imagem</label>
+          <input
+            type="text"
+            id="img"
+            name="img"
+            placeholder="Cole aqui o link da imagem"
+            required
+          />
+
+          <button id="btnCadastrar" type="submit">Cadastrar</button>
+        </form>
+        <% } else { %>
+
+        <h2>Atualização do Vinho</h2>
+
+        <article>
+          <img src="<%= vinho.img %>" alt="" />
+          <h3><%= vinho.nome %></h3>
+        </article>
+
+        <form action="/upDate/<%= vinho.id %>" method="POST">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" value="<%= vinho.nome%>" required/>
+
+          <label for="uva">Uva:</label>
+          <input type="text" id="uva" name="uva" value="<%= vinho.uva%>" required/>
+
+          <label for="tipo">Tipo:</label>
+          <input type="text" id="tipo" name="tipo" value="<%= vinho.tipo%>" required/>
+
+          <label for="gradAlcoo">Graduação Alcoolica %</label>
+          <input
+            type="text"
+            id="gradAlcoo"
+            name="gradAlcoo"
+            value="<%= vinho.gradAlcoo%>"
+            required
+          />
+
+          <label for="safra">Safra</label>
+          <input
+            type="text"
+            id="safra"
+            name="safra"
+            value="<%= vinho.safra%>"
+            required
+          />
+
+          <label for="vinhedo">Vinhedo</label>
+          <input
+            type="text"
+            id="vinhedo"
+            name="vinhedo"
+            value="<%= vinho.vinhedo%>"
+            required
+          />
+
+          <label for="classe">Classe:</label>
+          <input
+            type="text"
+            id="classe"
+            name="classe"
+            value="<%= vinho.classe%>"
+            required
+          />
+
+          <label for="classificacao">Classificação:</label>
+          <input
+            type="text"
+            id="classificacao"
+            name="classificacao"
+            value="<%= vinho.classificacao%>"
+            required
+          />
+
+          <label for="volume">Volume:</label>
+          <input
+            type="text"
+            id="volume"
+            name="volume"
+            value="<%= vinho.volume%>"
+            required
+          />
+
+          <label for="imagem">Link da Imagem</label>
+          <input
+            type="text"
+            id="img"
+            name="img"
+            value="<%= vinho.img%>"
+            required
+          />
+
+          <button id="btnAtualizar" type="submit">Atualizar</button>
+        </form>
+        <% } %>
+      </section>
+      
+    </main>
+
+    <footer>
+      <p>Ednilson Fragoso</p>
+      <p><a href="https://github.com/">GitHub</a></p>
+    </footer>
+   
+  </body>
+</html>
