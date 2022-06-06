@@ -17,31 +17,41 @@
       </ul>
     </nav>
 
-    <section id="cards">
-      <div class="card">
-        <img src="<%= vinhoB.img %>" alt="vinho branco" />
+    <main>
+      <section id="cards">
+        <div class="card">
+          <img src="<%= vinhoB.img %>" alt="vinho branco" />
 
-        <h3><strong><%= vinhoB.nome %></strong></h3>
+          <h3><strong><%= vinhoB.nome %></strong></h3>
 
-        <p class="numero"><strong>Nº </strong><%= vinhoB.id %></p>
-        <p class="nome"><strong>Nome: </strong><%= vinhoB.nome %></p>
-        <p class="uva"><strong>Uva: </strong><%= vinhoB.uva %></p>
-        <p class="tipo"><strong>Tipo: </strong><%= vinhoB.tipo %></p>
-        <p class="gradAlcoo">
-          <strong>Graduação Alcoolica: </strong><%= vinhoB.gradAlcoo %> %
-        </p>
-        <p class="safra"><strong>Safra: </strong><%= vinhoB.safra %></p>
-        <p class="vinhedo"><strong>Vinhedo: </strong><%= vinhoB.vinhedo %></p>
-        <p class="classe"><strong>classe: </strong><%= vinhoB.classe %></p>
-        <p class="classificacao">
-          <strong>Classificação: </strong><%= vinhoB.classificacao %>
-        </p>
-        <p class="volume"><strong>Volume: </strong><%= vinhoB.volume %> ml</p>
+          <p class="numero"><strong>Nº </strong><%= vinhoB.id %></p>
+          <p class="nome"><strong>Nome: </strong><%= vinhoB.nome %></p>
+          <p class="uva"><strong>Uva: </strong><%= vinhoB.uva %></p>
+          <p class="tipo"><strong>Tipo: </strong><%= vinhoB.tipo %></p>
+          <p class="gradAlcoo">
+            <strong>Graduação Alcoolica: </strong><%= vinhoB.gradAlcoo %> %
+          </p>
+          <p class="safra"><strong>Safra: </strong><%= vinhoB.safra %></p>
+          <p class="vinhedo"><strong>Vinhedo: </strong><%= vinhoB.vinhedo %></p>
+          <p class="classe"><strong>classe: </strong><%= vinhoB.classe %></p>
+          <p class="classificacao">
+            <strong>Classificação: </strong><%= vinhoB.classificacao %>
+          </p>
+          <p class="volume"><strong>Volume: </strong><%= vinhoB.volume %> ml</p>
 
-        <a id="editar" href="/editarVB/<%= vinhoB.id%>">Editar</a>
-        <a id="apagar" href="/deleteVB/<%= vinhoB.id%>">Apagar</a>
-      </div>
-    </section>
-    
+          <a id="editar" href="/editarVB/<%= vinhoB.id%>">Editar</a>
+          <a id="apagar">Apagar</a>
+        </div>
+      </section>
+
+      <section id="modal-container">
+        <h2 id="msgText">Deseja realmente apagar?</h2>
+        <button id="close">X</button>
+        <a class="sim" href="/deleteVb/<%= vinhoB.id%>">SIM</a>
+        <a class="nao" href="/descricaoVB/<%= vinhoB.id %>">NÃO</a>
+      </section>
+    </main>
+    <script src="../js/scriptModal.js"></script>
   </body>
 </html>
+<!--href="/deleteVb/<%= vinhoB.id%>"-->

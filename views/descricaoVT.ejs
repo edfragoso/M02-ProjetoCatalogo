@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/descricao.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/descricao.css" />
     <title>Vinhos Tintos</title>
-</head>
-<body>
-   <nav>
-      <ul><li><img src="" alt="" /></li>
-        <li><a id="inicio"  href="/">Inicio</a></li>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><img src="" alt="" /></li>
+        <li><a id="inicio" href="/">Inicio</a></li>
         <li><a id="vinhoBranco" href="/vinhosBrancos">Vinhos Branco</a></li>
         <li><a id="cadastro" href="/cadastro">Cadastrar Vinho</a></li>
       </ul>
     </nav>
 
     <section id="cards">
-       
-        <div class="card">
-          
-          <img src="<%= vinhoT.img %>" alt="vinho tinto">
-            
-            <h3><strong><%= vinhoT.nome %></strong></h3>
-            
-            <p class="numero"><strong>Nº </strong><%= vinhoT.id %></p>
-            <p class="nome"><strong>Nome: </strong><%= vinhoT.nome %></p>
-            <p class="uva"><strong>Uva: </strong><%= vinhoT.uva %></p>
-            <p class="tipo"><strong>Tipo: </strong><%= vinhoT.tipo %></p>
-            <p class="gradAlcoo"><strong>Graduação Alcoolica:</strong> <%= vinhoT.gradAlcoo %>%</p>
-            <p class="safra"><strong>Safra: </strong><%= vinhoT.safra %></p>
-            <p class="vinhedo"><strong>Vinhedo: </strong><%= vinhoT.vinhedo %></p>
-            <p class="classe"><strong>classe: </strong><%= vinhoT.classe %></p>
-            <p class="classificacao"><strong>Classificação: </strong><%= vinhoT.classificacao %></p>
-            <p class="volume"><strong>Volume: </strong><%= vinhoT.volume %>ml</p>
-            
+      <div class="card">
+        <img src="<%= vinhoT.img %>" alt="vinho tinto" />
 
-            <a id="editar" href="/editarVT/<%= vinhoT.id%>">Editar</a>
-            <a id="apagar" href="/deleteVT/<%= vinhoT.id%>">Apagar</a>
-            
-        </div>
-    
-      </section>
-      <footer>
+        <h3><strong><%= vinhoT.nome %></strong></h3>
+
+        <p class="numero"><strong>Nº </strong><%= vinhoT.id %></p>
+        <p class="nome"><strong>Nome: </strong><%= vinhoT.nome %></p>
+        <p class="uva"><strong>Uva: </strong><%= vinhoT.uva %></p>
+        <p class="tipo"><strong>Tipo: </strong><%= vinhoT.tipo %></p>
+        <p class="gradAlcoo">
+          <strong>Graduação Alcoolica:</strong> <%= vinhoT.gradAlcoo %>%
+        </p>
+        <p class="safra"><strong>Safra: </strong><%= vinhoT.safra %></p>
+        <p class="vinhedo"><strong>Vinhedo: </strong><%= vinhoT.vinhedo %></p>
+        <p class="classe"><strong>classe: </strong><%= vinhoT.classe %></p>
+        <p class="classificacao">
+          <strong>Classificação: </strong><%= vinhoT.classificacao %>
+        </p>
+        <p class="volume"><strong>Volume: </strong><%= vinhoT.volume %>ml</p>
+
+        <a id="editar" href="/editarVT/<%= vinhoT.id%>">Editar</a>
+        <a id="apagar">Apagar</a>
+      </div>
+    </section>
+
+    <section id="modal-container">
+      <h2 id="msgText">Deseja realmente apagar?</h2>
+      <button id="close">X</button>
+      <a class="sim" href="/deleteVT/<%= vinhoT.id%>">SIM</a>
+      <a class="nao" href="/descricaoVT/<%= vinhoT.id %>">NÃO</a>
+    </section>
+
+    <footer>
       <p>Ednilson Fragoso</p>
       <p><a href="https://github.com/">GitHub</a></p>
     </footer>
-    
-</body>
+    <script src="../js/scriptModal.js"></script>
+  </body>
 </html>
