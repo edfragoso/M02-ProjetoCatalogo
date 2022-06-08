@@ -173,14 +173,14 @@ app.post("/cadastrar", (req, res) => {
 app.get("/editarVT/:id", (req, res) => {
   let id = +req.params.id;
   let vinho = req.body;
-  vinho = vinhoTinto.find((vinho) => vinho.id === id);
+  vinho = vinhoTinto.find((vinho) => vinho && (vinho.id === id));
   menssagem = `Alteração do Vinho ${vinho.nome} efetuado com sucesso!!`;
   res.render("formulario", { vinho });
 });
 
 app.get("/editarVB/:id", (req, res) => {
   let id = +req.params.id; 
-  vinho = vinhoBranco.find((vinho) => vinho.id === id);
+  vinho = vinhoBranco.find((vinho) => vinho && (vinho.id === id));
   menssagem = `Alteração do Vinho ${vinho.nome} efetuado com sucesso!!`;
   res.render("formulario", { vinho });
 });
@@ -214,4 +214,5 @@ app.get("/deleteVB/:id", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
+  
 });
