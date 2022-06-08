@@ -134,13 +134,13 @@ app.get("/", (req, res) => {
 
 app.get("/descricaoVT/:id", (req, res) => {
   let id = +req.params.id;
-  let vinhoT = vinhoTinto.find((vinho) => vinho.id === id);
+  let vinhoT = vinhoTinto.find((vinho) => vinho && (vinho.id === id));
   res.render("descricaoVT", { vinhoT });
 });
 
 app.get("/descricaoVB/:id", (req, res) => {
   let id = +req.params.id;
-  let vinhoB = vinhoBranco.find((vinho) => vinho.id === id);
+  let vinhoB = vinhoBranco.find((vinho) => vinho && (vinho.id === id));
   res.render("descricaoVB", { vinhoB });
 });
 
@@ -214,5 +214,4 @@ app.get("/deleteVB/:id", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
-  
 });

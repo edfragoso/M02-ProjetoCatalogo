@@ -173,7 +173,7 @@ section#cards div.card a#apagar:hover {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 2000;
+  z-index: 9999;
   display: none; /* Deixa o modal oculto */
   justify-content: center;
   align-items: center;
@@ -184,8 +184,9 @@ section#cards div.card a#apagar:hover {
   background: rgb(28, 25, 25);
   border: 2px solid white;
   /* Tamanho do modal */
-  width: 60%;
-  padding: 40px;
+  width: 70%;
+  height: 60%;
+  padding: 20px;
   position: relative;
 }
 /* Estilização básica da mensagem */
@@ -201,12 +202,12 @@ section#cards div.card a#apagar:hover {
   text-align: center;
   position: absolute;
   font-size: 1.2em;
-  top: 350px;
-  right: 500px;
+  top: 200px;
+  right: 20px;
   /* Largura e altura do botão */
-  width: 100px;
+  width: 70px;
   height: 30px;
-  /* Exemplo básico de estlização */
+  /* Exemplo básico de estilização */
   border-radius: 20px;
   border: 4px solid white;
   background: rgba(116, 114, 114, 0.904);
@@ -229,10 +230,10 @@ section#cards div.card a#apagar:hover {
   text-align: center;
   position: absolute;
   font-size: 1.2em;
-  top: 350px;
-  left: 500px;
+  top: 200px;
+  left: 20px;
   /* Largura e altura do botão */
-  width: 100px;
+  width: 70px;
   height: 30px;
   /* Exemplo básico de estlização */
   border-radius: 20px;

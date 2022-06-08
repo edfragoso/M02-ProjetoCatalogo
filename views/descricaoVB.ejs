@@ -45,13 +45,14 @@
       </section>
 
       <section id="modal-container">
-        <h2 id="msgText">Deseja realmente apagar?</h2>
-        <button id="close">X</button>
-        <a class="sim" href="/deleteVb/<%= vinhoB.id%>">SIM</a>
-        <a class="nao" href="/descricaoVB/<%= vinhoB.id %>">NÃO</a>
+        <div id="modal">
+          <h2 id="msgText">Deseja realmente apagar?</h2>
+          <button id="close">X</button>
+          <a class="sim" href="/deleteVb/<%= vinhoB.id%>">SIM</a>
+          <a class="nao" href="/descricaoVB/<%= vinhoB.id %>">NÃO</a>
+        </div>
       </section>
     </main>
     <script src="../js/scriptModal.js"></script>
   </body>
 </html>
-<!--href="/deleteVb/<%= vinhoB.id%>"-->
