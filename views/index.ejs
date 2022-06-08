@@ -18,18 +18,20 @@
       </ul>
     </nav>
 
-    <header>
-      <img src="./img/Banner-Vinho-Site.jpg" class="imgVinho" alt="Banner" />
-    </header>
-
-    <% if(menssagem != "") {  %>
-    <section id="menssagem">
-        <p><%= menssagem %></p> <span id="close">&times;</span>
-    </section>
-    <% }  %>
-
     <main>
-      <h2 id="destaqueTinto">Destaques Tinto</h2>
+      <header>
+        <img src="./img/Banner-Vinho-Site.jpg" class="imgVinho" alt="Banner" />
+      </header>
+
+      <% if(menssagem != "") { %>
+      <section id="menssagem">
+        <p><%= menssagem %></p>
+        <span id="close">&times;</span>
+      </section>
+      <% } %>
+      <div class="destaque">
+        <h2 id="destaqueTinto">Destaques Tinto</h2>
+      </div>
       <section id="cards">
         <% vinhoTinto.forEach((vinhoT) => { %>
 
@@ -43,7 +45,10 @@
 
         <% }) %>
       </section>
-      <h2 id="destaqueBranco">Destaques Branco</h2>
+      <div class="destaque">
+        <h2 id="destaqueBranco">Destaques Branco</h2>
+      </div>
+
       <section id="cards">
         <% vinhoBranco.forEach((vinhoB) => { %>
 
@@ -58,10 +63,12 @@
         <% }) %>
       </section>
     </main>
+
     <footer>
       <p>Ednilson Fragoso</p>
       <p><a href="https://github.com/">GitHub</a></p>
     </footer>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
